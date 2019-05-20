@@ -13,18 +13,17 @@
                 text: 'pasirinkite antrą failą'
         BoxLayout:
             FileChooserIconView:
-                font_size: 25
-                id: filechooser1
+                id: file1
                 rootpath: './'
             FileChooserIconView:
-                id: filechooser2
+                id: file2
                 rootpath: './'
         BoxLayout:
             size_hint: 1, .2
             Button:
                 font_size: 25
                 text: "Užkrauti"
-                on_release: root.load_images(filechooser1.selection, filechooser2.selection)
+                on_release: root.load_images(file1.selection, file2.selection)
 
 
 <MergeModeChooser>:
@@ -34,7 +33,7 @@
     BoxLayout:
         orientation: 'vertical'
         BoxLayout:
-            size_hint: 1, .15
+            size_hint: 1, .2
             Button:
                 text: "median"
                 on_release: root.choose_mode("median")

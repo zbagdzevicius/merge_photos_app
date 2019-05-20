@@ -11,6 +11,7 @@ from kivy.uix.image import CoreImage
 from io import BytesIO
 
 from merge import Merge
+import traceback
 
 
 class MergeModeChooser(Popup, Merge):
@@ -60,4 +61,5 @@ if __name__ == '__main__':
         app.run()
     except Exception as e:
         print(e)
+        print(traceback.print_exc())
         app.get_running_app().stop()
